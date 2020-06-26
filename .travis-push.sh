@@ -17,7 +17,7 @@ setup_git() {
   git config --global user.email "pzqu@qq.com"
   git config --global user.name "pzqu"
   rm -rf *
-  git clone --depth=50 --branch=master $SRC_REPO_URL
+  git clone --depth=1 --branch=master $SRC_REPO_URL
   repo_dir=$(ls) && cp -rf $repo_dir/* ./ &&  rm -rf $repo_dir
 }
 
