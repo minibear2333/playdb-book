@@ -13,6 +13,9 @@ DEST_REPO_URL=$GH_REPO_URL
 SRC_REPO_URL=$KY_REPO_URL
 
 setup_git() {
+  git config http.postBuffer 524288000
+  git config --global http.lowSpeedLimit 0
+  git config --global http.lowSpeedTime 999999
   git show -s --format=%ct
   git config --global user.email "pzqu@qq.com"
   git config --global user.name "pzqu"
