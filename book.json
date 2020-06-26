@@ -1,0 +1,35 @@
+{
+    "plugins": [
+        "highlight",
+        "image-zoom",
+        "comment",
+        "copy-code",
+        "sql-table",
+        "dzan"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "auto_open": true,
+            "show_nav": true,
+            "logo": {},
+            "navs": [
+                {
+                    "title": "官网链接",
+                    "url": "https://coding3min.com",
+                    "target": true
+                },
+                {
+                    "title": "小册首页",
+                    "url": "https://www.kancloud.cn/coding3min/coding3min/content",
+                    "target": false
+                },
+                {
+                    "title": "go语言应急手册",
+                    "url": "https://www.kancloud.cn/coding3min/golang/content",
+                    "target": false
+                }
+            ]
+        },
+        "highlight": {}
+    }
+}
