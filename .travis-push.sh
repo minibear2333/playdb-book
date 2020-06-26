@@ -17,7 +17,7 @@ setup_git() {
   git config --global user.email "pzqu@qq.com"
   git config --global user.name "pzqu"
   rm -rf *
-  git clone --depth=5 --branch=master $SRC_REPO_URL
+  git clone  $SRC_REPO_URL
   repo_dir=$(ls) && cp -rf $repo_dir/* ./ &&  rm -rf $repo_dir
 }
 
@@ -44,7 +44,7 @@ upload_files() {
 
 compare_new() {
    github_last_commit_time=$(git show -s --format=%ct)
-   git clone --depth=5 --branch=master $KY_REPO_URL && cd $KY_REPO_NAME
+   git clone $KY_REPO_URL && cd $KY_REPO_NAME
    ky_last_commit_time=$(git show -s --format=%ct)
    if [ $github_last_commit_time -gt $ky_last_commit_time ];then
        SRC_REPO_URL=$GH_REPO_URL
